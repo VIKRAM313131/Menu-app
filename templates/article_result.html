@@ -1,0 +1,51 @@
+<!-- templates/article_result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Result</title>
+    <style>/* static/css/styles.css */
+
+        /* Body and Typography */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+        
+        p {
+            margin-bottom: 10px;
+        }
+        
+        strong {
+            color: #007bff;
+        }
+        
+        /* Content Styles */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        </style>
+</head>
+<body>
+    <h1>Generated Article</h1>
+    <p><strong>Prompt:</strong></p>
+    <p>{{ prompt_text }}</p>
+    <p><strong>Generated Article:</strong></p>
+    <p>{{ response_text }}</p>
+</body>
+</html>

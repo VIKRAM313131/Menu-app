@@ -1,0 +1,59 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 20px; /* Add padding to the body */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content horizontally */
+}
+
+h1 {
+    font-size: 2.5em; /* Font size for the title */
+    color: #007acc;
+    margin-bottom: 20px;
+    text-align: center; /* Center align the title */
+    text-transform: uppercase; /* Convert text to uppercase for emphasis */
+    letter-spacing: 2px; /* Add letter spacing for clarity */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Gap between grid items */
+    max-width: 1200px; /* Limit maximum width of the grid */
+    width: 100%; /* Take up full available width */
+    margin-top: 20px; /* Margin at the top of the grid */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 15px; /* Padding inside list items */
+    background-color: #fff; /* Background color of list items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease-in-out; /* Smooth scale transition */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+li:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+a {
+    text-decoration: none;
+    color: #007acc;
+    font-size: 1.2em;
+    display: block;
+    text-align: center; /* Center align text inside links */
+}
+
+a:hover {
+    color: #004266; /* Darker color on hover */
+}

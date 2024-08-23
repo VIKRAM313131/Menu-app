@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Menu App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/new.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f5e9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #388e3c;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            max-width: 1000px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        li {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 16px; /* More curved corners */
+            transition: transform 0.3s, background-color 0.3s;
+            cursor: pointer;
+            text-align: center;
+            padding: 15px;
+        }
+
+        li:hover {
+            background-color: #c8e6c9;
+            transform: scale(1.05);
+        }
+
+        a {
+            text-decoration: none;
+            color: #388e3c;
+            font-size: 1em;
+            display: block;
+        }
+
+        a:hover {
+            color: #1b5e20;
+        }
+    </style>
+</head>
+<body>
+    <h1>Optimize Your Digital Life with Python</h1>
+    <div class="container">
+        <ul>
+            <li><a href="{{ url_for('whatsapp') }}">1. WhatsApp Message</a></li>
+            <li><a href="{{ url_for('phone_link') }}">2. SMS Message Ⓜ️</a></li>
+            <li><a href="{{ url_for('email') }}">3. Email Message 📩</a></li>
+            <li><a href="{{ url_for('send_bulk_email') }}">4. Bulk Email Message 📨</a></li>
+            <li><a href="{{ url_for('search') }}">5. Google Search 🔍</a></li>
+            <li><a href="{{ url_for('speak_text') }}">6. Text-To-Speech 🗣️</a></li>
+            <li><a href="{{ url_for('volume') }}">7. Set Volume 🔊</a></li>
+            <li><a href="{{ url_for('geo_location') }}">8. Get Coordinates 🗺️</a></li>
+            <li><a href="{{ url_for('face_detection') }}">9. Zoom on Face 🔎</a></li>
+            <li><a href="{{ url_for('face_detection_filters') }}">10. Video Filters 👓</a></li>
+            <li><a href="{{ url_for('upload_image') }}">11. Image Filter 🟦</a></li>
+            <li><a href="{{ url_for('predict') }}">12. Predict Height ↗️</a></li>
+            <li><a href="{{ url_for('upload_file') }}">13. Image Color 🟩</a></li>
+            <li><a href="/generate_article">14. Generate Article 💬</a></li>
+        </ul>
+    </div>
+</body>
+</html>

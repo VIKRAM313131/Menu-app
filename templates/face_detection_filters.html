@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Video with Filters</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/filter.css') }}">
+</head>
+<body>
+    <h1>Live Video with Filters</h1>
+    <div id="video-container">
+        <img src="{{ url_for('video_feed_with_filters') }}" alt="Video Feed">
+    </div>
+    <div id="filters">
+        <h2>Select a Filter:</h2>
+        <a href="{{ url_for('select_video_filter', filter_name='none') }}">No Filter</a>
+        <a href="{{ url_for('select_video_filter', filter_name='glass') }}">
+            <img src="{{ url_for('static', filename='filters/glass.png') }}" alt="Glass Filter">
+        </a>
+   
+    </div>
+    <a href="{{ url_for('stop_filtered_camera') }}">Back to Menu</a>
+</body>
+</html>

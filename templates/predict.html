@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Height</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Predict Height from Weight</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+        <label for="weight">Enter Weight (kg):</label>
+        <input type="text" id="weight" name="weight" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if result is not none %}
+        <h2>Prediction Result</h2>
+        {% if weight %}
+            <p>Weight entered: {{ weight }} kg</p>
+        {% endif %}
+        <p>Predicted height: {{ result }} cm</p>
+    {% endif %}
+    
+    <a href="{{ url_for('index') }}">Back to Menu</a>
+</body>
+</html>

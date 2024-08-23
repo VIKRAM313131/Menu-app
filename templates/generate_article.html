@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Article</title>
+    <style>
+        /* Body and Typography */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9; /* Light green background */
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #388e3c; /* Dark green color */
+            margin-top: 20px;
+        }
+
+        /* Form Styles */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #388e3c; /* Dark green */
+        }
+
+        textarea {
+            width: calc(100% - 20px); /* Adjust for padding */
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #388e3c; /* Dark green border */
+            border-radius: 4px;
+            resize: none; /* Prevent resizing */
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #388e3c; /* Dark green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #1b5e20; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Generate Article with Gemini API</h1>
+    <form method="POST">
+        <label for="prompt_text">Enter Prompt:</label>
+        <textarea name="prompt_text" id="prompt_text" rows="5" cols="50" required></textarea>
+        <br><br>
+        <button type="submit">Generate Article</button>
+    </form>
+</body>
+</html>
